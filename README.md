@@ -79,16 +79,23 @@ BuildMyMd/ └── buildmymd/ ├── components/ │   ├── Editor.tsx
 ## ⚙️ Installation
 
 ```bash
-# Clone repo
+# Clone Repository
 git clone https://github.com/ProgrammerKR/BuildMyMd.git
+```
 
+```bash
 cd BuildMyMd/buildmymd
+```
 
+```bash
 # Install dependencies
 npm install
+```
 
+```bash
 # Start development server
 npm run dev
+```
 
 ---
 
@@ -98,7 +105,9 @@ Or use directly from the website -: https://buildmymd.netlify.app
 
 🧪 Build for Production
 
+```bash
 npm run build
+```
 
 
 ---
@@ -149,4 +158,5 @@ Your support motivates future features & improvements.
 Built with ❤️ by ProgrammerKR (Prog. Kanishk Raj).
 
 ---
+
 
