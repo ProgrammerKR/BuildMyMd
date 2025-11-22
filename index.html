@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuildMyMD | Enterprise Documentation Builder</title>
+    <meta name="description" content="The ultimate Markdown editor for developers." />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                900: '#0c4a6e',
+              },
+              editor: {
+                bg: '#0f172a',
+                fg: '#e2e8f0',
+                border: '#1e293b',
+              }
+            },
+            fontFamily: {
+              mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Markdown-it & Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it-emoji@3.0.0/dist/markdown-it-emoji.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it-task-lists@2.1.1/dist/markdown-it-task-lists.min.js"></script>
+    
+    <!-- GitHub Markdown CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown.min.css">
+    
+    <!-- Prism.js for Syntax Highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-jsx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-tsx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+      body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f8fafc; }
+      .scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+      .scrollbar-thin::-webkit-scrollbar-track { background: #0f172a; }
+      .scrollbar-thin::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+      .scrollbar-thin::-webkit-scrollbar-thumb:hover { background: #475569; }
+      .editor-textarea { caret-color: #38bdf8; outline: none; }
+      
+      /* Markdown Body Overrides for smoother integration */
+      .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 45px;
+        font-family: 'Inter', sans-serif;
+      }
+      
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+
+      /* Dark mode adjustments for GitHub CSS if not auto-detected */
+      .markdown-body.dark {
+        background-color: #0d1117;
+        color: #c9d1d9;
+      }
+      
+      /* Light mode adjustments */
+      .markdown-body.light {
+        background-color: #ffffff;
+        color: #24292f;
+      }
+
+      /* FIX: Force table colors to match theme explicitly to prevent white-on-white */
+      .markdown-body.light table, 
+      .markdown-body.light th, 
+      .markdown-body.light td {
+        color: #24292f !important;
+        background-color: #ffffff;
+      }
+      .markdown-body.light tr:nth-child(2n) {
+        background-color: #f6f8fa;
+      }
+
+      .markdown-body.dark table, 
+      .markdown-body.dark th, 
+      .markdown-body.dark td {
+        color: #c9d1d9 !important;
+        background-color: #0d1117;
+      }
+      .markdown-body.dark tr:nth-child(2n) {
+        background-color: #161b22;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "zustand/": "https://aistudiocdn.com/zustand@^5.0.8/",
+    "zustand": "https://aistudiocdn.com/zustand@^5.0.8",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
