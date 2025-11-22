@@ -15,7 +15,7 @@ It includes 75+ smart tools such as live preview, templates, badge generator, se
 - Undo/redo support  
 - Word & line statistics  
 - Import `.md` files  
-- Export to `.md`, `.txt`, `.html`, `.pdf`
+- Export to `.md`
 
 ### 📄 Templates System
 - 30+ pre-made README templates  
@@ -80,7 +80,7 @@ BuildMyMd/ └── buildmymd/ ├── components/ │   ├── Editor.tsx
 
 ```bash
 # Clone repo
-git clone https://github.com/yourusername/BuildMyMd.git
+git clone https://github.com/ProgrammerKR/BuildMyMd.git
 
 cd BuildMyMd/buildmymd
 
@@ -90,6 +90,9 @@ npm install
 # Start development server
 npm run dev
 
+---
+
+Or use directly from the website -: https://buildmymd.netlify.app
 
 ---
 
@@ -128,7 +131,7 @@ Open a pull request or create an issue.
 
 📜 License
 
-This project is licensed under the MIT License.
+Check License file for more details.
 
 
 ---
@@ -143,6 +146,7 @@ Your support motivates future features & improvements.
 
 👨‍💻 Author
 
-Built with ❤️ by ProgrammerKR (Kanishk Raj).
+Built with ❤️ by ProgrammerKR (Prog. Kanishk Raj).
 
 ---
+
